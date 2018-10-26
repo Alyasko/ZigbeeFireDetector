@@ -28,9 +28,6 @@ void loop()
   {
     int actualSensorValue = avgSum / AVERAGE_BUFFER_SIZE;
 
-    Serial.print("Sensor value: ");
-    Serial.println(actualSensorValue);
-
     if (actualSensorValue >= SENSOR_THRESHOLD)
     {
       Serial.println("Gas/smoke detected!");
