@@ -1,7 +1,7 @@
 
 #define SENSOR_DIGITAL_PIN 2
 
-int data = LOW;
+int data = HIGH;
 
 void setup() {
   pinMode(SENSOR_DIGITAL_PIN, INPUT);
@@ -13,7 +13,7 @@ void setup() {
 void loop()
 {
   data = digitalRead(SENSOR_DIGITAL_PIN);
-  if (data == HIGH) {
+  if (data == LOW) {
     Serial.println("Flame detected!");
   }
   delay(100);
